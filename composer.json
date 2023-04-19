@@ -1,0 +1,15 @@
+{
+    "name": "drupal/hcpss_monitoring",
+    "description": "Exposes monitoring sensors ",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Brendan Anderson",
+            "email": "brendan_anderson@hcpss.org"
+        }
+    ],
+    "require": {
+        "drupal/monitoring": "^1.13"
+    }
+}

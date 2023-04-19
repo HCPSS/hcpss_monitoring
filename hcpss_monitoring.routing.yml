@@ -1,0 +1,7 @@
+hcpss_monitoring.monitor:
+  path: '/monitoring'
+  defaults:
+    _title: 'Monitoring'
+    _controller: '\Drupal\hcpss_monitoring\Controller\HcpssMonitoringController::build'
+  requirements:
+    _permission: 'monitoring reports'

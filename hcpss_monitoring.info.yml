@@ -1,0 +1,7 @@
+name: HCPSS Monitoring
+type: module
+description: Exposes monitoring sensors via api.
+package: HCPSS
+core_version_requirement: ^9 || ^10
+dependencies:
+  - monitoring

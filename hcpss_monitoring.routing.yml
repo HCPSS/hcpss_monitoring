@@ -5,3 +5,5 @@ hcpss_monitoring.monitor:
     _controller: '\Drupal\hcpss_monitoring\Controller\HcpssMonitoringController::build'
   requirements:
     _permission: 'monitoring reports'
+  options:
+    _auth: ['oauth2']

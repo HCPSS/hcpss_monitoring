@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "drupal/monitoring": "^1.13"
+        "drupal/monitoring": "^1.13",
+        "drupal/simple_oauth": "^6.0@beta"
     }
 }

@@ -1,0 +1,19 @@
+<?php
+
+use Drupal\Core\Config\FileStorage;
+
+/**
+ * Add Drupal and PHP version sensors.
+ */
+function hcpss_monitoring_update_91001(&$sandbox) {
+  $names = [
+    'monitoring.sensor_config.drupal_version',
+    'monitoring.sensor_config.php_version',
+  ];
+
+  foreach ($names as $name) {
+    $source = new FileStorage(__DIR__ . "/config/install");
+    $active_storage = \Drupal::service('config.storage');
+    $active_storage->write($name, $source->read($name));
+  }
+}

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - hcpss_monitoring
+id: drupal_version
+label: 'Drupal Version'
+description: 'Check the Drupal core version.'
+category: HCPSS
+plugin_id: drupal_version
+result_class: null
+value_label: Version
+value_type: string
+caching_time: 3600
+settings: {  }
+thresholds:
+  type: none

@@ -5,3 +5,12 @@ hcpss_monitoring.monitor:
     _controller: '\Drupal\hcpss_monitoring\Controller\HcpssMonitoringController::build'
   requirements:
     _permission: 'monitoring reports'
+hcpss_monitoring.monitor_table:
+  path: '/monitoring/table'
+  defaults:
+    _title: 'Monitoring Table'
+    _controller: '\Drupal\hcpss_monitoring\Controller\HcpssMonitoringController::table'
+  requirements:
+    _permission: 'monitoring reports'
+  options:
+    _admin_route: TRUE

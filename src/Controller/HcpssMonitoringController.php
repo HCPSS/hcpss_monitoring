@@ -50,10 +50,7 @@ class HcpssMonitoringController extends ControllerBase  {
     );
   }
 
-  /**
-   * Builds the response.
-   */
-  public function build() {
+  private function getSensorResults() {
     $results = $this->sensorRunner->runSensors();
 
     $output = [];
@@ -70,6 +67,30 @@ class HcpssMonitoringController extends ControllerBase  {
       $output[] = $result_array;
     }
 
-    return new JsonResponse($output);
+    return $output;
+  }
+
+  /**
+   * Builds the response.
+   */
+  public function build() {
+    return new JsonResponse($this->getSensorResults());
+  }
+
+  public function table() {
+    $results = $this->getSensorResults();
+    $header = array_keys($results[0]);
+    $rows = [];
+    foreach ($results as $result) {
+      $rows[] = $result;
+    }
+
+    return [
+      'build' => [
+        '#type' => 'table',
+        '#header' => $header,
+        '#rows' => $rows,
+      ]
+    ];
   }
 }
